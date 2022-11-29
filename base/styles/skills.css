@@ -1,0 +1,105 @@
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-right: 120px;
+  margin: 5% auto;
+}
+
+.skill-set {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.skills {
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-between;
+}
+
+h4 {
+  color: #ffb400;
+  margin: 5px 0;
+}
+
+h6 {
+  display: inline;
+  padding: 9px;
+  font-weight: light;
+  font-size: small;
+  background-color: rgb(11, 15, 29);
+  border-radius: 1em;
+}
+
+h1,
+h3 {
+  text-align: center;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid blue; */
+  padding: 30px;
+}
+
+h3 {
+  margin: 20px;
+  text-align: center;
+}
+
+.chat {
+  /* border: 1px solid yellow; */
+  width: 100px;
+  height: 100px;
+}
+
+.xp {
+  width: 100%;
+}
+
+.experiences {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+}
+
+.experience {
+  max-width: 450px;
+  display: flex;
+}
+
+.circle {
+  /* width: 80px; */
+  width: 100%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 992px) {
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .experiences {
+    gap: 2rem;
+    padding: 8px;
+  }
+
+  .skill-set {
+    padding: 10px;
+  }
+
+  .skill {
+    padding: unset;
+  }
+
+  .skills {
+    margin-bottom: 15px;
+    align-items: center;
+  }
+}

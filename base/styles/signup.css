@@ -1,0 +1,163 @@
+/* h1 {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  color: #ffb400;
+}
+
+h6 {
+  font-size: large;
+  margin-left: 35px;
+} */
+
+.p1 {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  color: #ffb400;
+}
+
+.p2 {
+  font-size: 25px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 5% auto;
+  padding: 2rem;
+}
+
+.calling h2 {
+  color: #ffb400;
+}
+
+.calling {
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  max-width: 360px;
+}
+
+.fields {
+  width: 460px;
+  background-color: #001823;
+  border: 2px solid #0e79b2;
+  box-shadow: 0px 0px 10px 5px #0e1c22;
+  border-radius: 35px;
+}
+
+input {
+  display: block;
+  width: 350px;
+  height: 50px;
+  border: #ffb400 3px solid;
+  border-radius: 20px;
+}
+
+label h6 {
+  font-size: larger;
+  margin-left: 5%;
+}
+
+label {
+  display: block;
+  margin: 10%;
+  /* margin: 20px; */
+}
+
+input {
+  border-radius: 20px;
+  color: #ffffff;
+}
+
+.inline {
+}
+
+.sign {
+  display: flex;
+  justify-content: center;
+}
+
+input[type='password'] {
+  background: linear-gradient(#0e1c22, #0e1c22) padding-box,
+    linear-gradient(0deg, #ffb400, #9f2042) border-box;
+  border: 2px solid transparent;
+  width: 100%;
+}
+
+input[type='email'] {
+  background-color: #0e1c22;
+  border: 2px solid #9f2042;
+  width: 100%;
+}
+
+input[type='text'] {
+  background: linear-gradient(#0e1c22, #0e1c22) padding-box,
+    linear-gradient(0deg, #9f2042, #ffb400) border-box;
+  border: 2px solid transparent;
+  width: 100%;
+}
+
+input[type='submit'] {
+  width: 120px;
+  font-weight: bolder;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, #ffb400, #9f2042) padding-box;
+  border: none;
+  margin-bottom: 10%;
+}
+
+::placeholder {
+  padding-left: 15px;
+  font-size: large;
+}
+
+@media only screen and (max-width: 992px) {
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 5% auto;
+  }
+
+  .calling {
+    gap: 5px;
+    max-width: 360px;
+  }
+
+  label {
+    display: block;
+    margin: 5%;
+  }
+
+  label h6 {
+    font-size: medium;
+    margin-left: 5%;
+  }
+
+  .calling h1,
+  h2 {
+    font-size: medium;
+  }
+
+  .p1 {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: #ffb400;
+  }
+
+  .p2 {
+    font-size: unset;
+  }
+}
