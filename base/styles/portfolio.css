@@ -1,0 +1,65 @@
+body {
+}
+
+body h1 {
+  text-align: center;
+}
+
+.projects {
+  max-width: 900px;
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 5% auto;
+}
+
+.proj1 {
+  background: #001823;
+  border: 1px solid #0e79b2;
+  border-radius: 1rem;
+  max-width: 240px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin: 5%;
+}
+
+.head p {
+  font-size: small;
+}
+
+.thumb {
+  background: url(../images/Rectangle\ 8.png) no-repeat center;
+  max-width: 240px;
+  height: 160px;
+  border: #0e79b2 1px solid;
+  border-radius: 1rem;
+}
+
+span {
+  color: #ffb400;
+}
+
+@media only screen and (max-width: 992px) {
+  .content {
+    gap: 1rem;
+    width: unset;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .projects {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    margin: 10% auto;
+  }
+
+  .proj1 {
+    margin-left: 20%;
+  }
+}

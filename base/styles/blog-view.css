@@ -1,0 +1,106 @@
+h1 {
+  color: #ffb400;
+}
+
+.container {
+  max-width: 880px;
+  margin: 60px auto;
+}
+
+.thumb {
+  background: url('../images/Rectangle\ 67.png') no-repeat center;
+  max-width: 700px;
+  height: 300px;
+  border: #0e79b2 1px solid;
+  border-radius: 1rem;
+  margin: 30px auto;
+}
+
+.blog p {
+  margin-bottom: 30px;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.coment-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.coments p,
+.likes p,
+.views p {
+  color: #ffb400;
+  display: inline-block;
+  vertical-align: super;
+  font-size: small;
+}
+
+.coment p {
+  padding-bottom: 10px;
+  border-bottom: #0e79b2 1px solid;
+}
+
+.comented {
+  max-width: 40%;
+
+}
+
+.single-com {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.comenting {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.pic {
+  background-color: #d9d9d9;
+  border-radius: 25px;
+  min-width: 50px;
+  height: 50px;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.name h4 {
+  color: #0e79b2;
+}
+
+.name p,
+.coment p {
+  font-size: small;
+}
+
+textarea {
+  background-color: #001823;
+  border: #0e79b2 1px solid;
+  border-radius: 1rem;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  color: #d9d9d9;
+  border-radius: 0.5rem;
+  background-color: #0e79b280;
+  max-width: 100px;
+  height: 30px;
+}

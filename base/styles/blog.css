@@ -1,0 +1,90 @@
+body h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a p {
+  color: #d9d9d9;
+}
+/* .wrapper {
+  height: 100%;
+  vertical-align: middle;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 50px;
+  max-width: 850px;
+  margin: auto;
+} */
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5%;
+  /* justify-content: space-around;
+  flex-wrap: wrap; */
+  max-width: 1000px;
+  margin: 2% auto;
+  padding: 2rem;
+}
+
+.box {
+  background-color: #001823;
+  border: #0e79b2 1px solid;
+  border-radius: 20px;
+  max-width: 80%;
+  position: relative;
+  margin: auto;
+}
+
+.box h2 {
+  font-size: small;
+  color: #ffb400;
+  padding: 8px 15px;
+}
+
+.box .par {
+  font-size: small;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+.box .foot {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-container {
+  background: url('../images/Rectangle 8.png') no-repeat center;
+  height: 120px;
+  border: #0e79b2 1px solid;
+  border-radius: 20px;
+}
+
+.likes,
+.coments,
+.views {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 8px 15px;
+}
+
+@media only screen and (max-width: 992px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* grid-template-columns: 1fr; */
+    gap: 2rem;
+    max-width: 450px;
+    margin: 2% auto;
+  }
+}
