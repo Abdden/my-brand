@@ -24,19 +24,30 @@
         </div>
         <div class="fields">
           <form action="">
-            <div class="name-email">
-              <input type="text" placeholder="Names" class="nme" />
-              <input type="email" placeholder="example@gmail.com" />
+            <div class="err">
+              <p id="name-err"></p>
+              <p id="mail-err"></p>
             </div>
-            <input type="text" placeholder="Subject" class="msg" />
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
-            <div class="sub"><input type="submit" value="Send" /></div>
+            <div class="name-email">
+              <input type="text" placeholder="Names" class="nme" id="user-name" />
+              <input type="email" name="" placeholder="example@gmail.com" id="user-email" />
+            </div>
+            <div class="err">
+              <p id="subject-err"></p>
+            </div>
+            <input type="text" id="subject" placeholder="Subject" class="msg" />
+            <textarea name="message" id="sms" cols="30" rows="10" placeholder="Message"></textarea>
+            <div class="err">
+              <p id="sms-err"></p>
+            </div>
+            <div class="sub"><input type="submit" value="Send" id="send" /></div>
+            <p id="send-err"></p>
           </form>
         </div>
         <div class="side-navigation">
           <div class="links">
             <p><span class="hdn">HOME</span></p>
-            <a href="./index.html"><img src="./icons/Home BTN.svg" alt="" /></a>
+            <a href="../index.html"><img src="./icons/Home BTN.svg" alt="" /></a>
           </div>
           <div class="links">
             <p><span class="hdn">ABOUT</span></p>
@@ -75,12 +86,18 @@
         <img src="./icons/linkedin (2).svg" alt="" />
       </div>
       <div class="left">
-        <p>Abdden's</p>
+        <a href="./admin-login.html">
+          <p>Abdden's</p>
+        </a>
         <p>© 2022</p>
       </div>
     </div>
 
   </div>
+  <dialog class="loadingScreen">
+    <div class="loader"></div>
+  </dialog>
+  <script src="./js/cont-data-valid.js"></script>
 </body>
 
 </html>

@@ -6,44 +6,56 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/admin.css">
+  <link rel="stylesheet" href="./styles/loader.css">
+  <script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
   <title>Admin</title>
 </head>
 
 <body>
-  <!-- <div id="container-article" class="container-article">
-    <div class="close" onclick="closePopUp()">
-      <img src="./icons/Close.svg" alt="">
-    </div>
-    <h2>Create Article</h2>
-    <div class="thumb-article">
-      <h3>Thumbnail</h3>
-      <div class="photo">
-        <img src="./icons/Upload-to-cloud.svg" alt="">
-        <input type="file" name="" id="">
+  <div class="editor">
+    <div class="container-article">
+      <div class="close" onclick="closePopUp()">
+        <img src="./icons/Close.svg" alt="">
       </div>
+
+      <div class="centered">
+        <div class="thumb-article">
+          <h4>Thumbnail</h4>
+          <label class="photo">
+            <img id="test" src="./icons/Upload-to-cloud.svg" alt="" class="isIcon">
+            <input type="file" name="" id="thmpic">
+            <p id="pic-err"></p>
+          </label>
+        </div>
+        <div class="headline">
+          <h4>Headline</h4>
+          <div class="title"><input type="text" name="" id="titleblock" onkeypress="validHead()"></div>
+          <p id="tyt-err"></p>
+        </div>
+        <div class="story-article">
+          <h4>Story/Article</h4>
+          <div class="article">
+            <textarea name="editor1" id="editor1" onkeypress="validArticle()" cols="30" rows="30"></textarea>
+          </div>
+          <p id="art-err"></p>
+        </div>
+        <button type="submit" id="post">POST</button>
+        <p id="post-err"></p>
+      </div>
+
     </div>
-    <div class="headline">
-      <h3>Headline</h3>
-      <div class="title"><input type="text" name="" id=""></div>
-    </div>
-    <div class="story-article">
-      <h3>Story/Article</h3>
-      <div class="article"><input type="text" name="" id=""></div>
-    </div>
-    <button type="submit">POST</button>
-  </div> -->
+
+  </div>
   <div class="wrapper">
     <div class="side-panel">
-      <a href="./index.html">
+      <a href="../index.html">
         <h1>Abdden's</h1>
       </a>
       <h4><span>&#x2713 Profile</span></h4>
       <h4><span>&#x2713 All Article</span></h4>
       <h4><span>&#x2713 All Queries</span></h4>
       <h4><span>&#x2713 All Registered Users</span></h4>
-      <a href="">
-        <h4 id="open"><span>&#x2713 Create Article</span></h4>
-      </a>
+      <h4 onclick="openPopUp()" style="cursor: pointer;"><span>&#x2713 Create Article</span></h4>
       <h4><span>&#x2713 Site Activity</span></h4>
     </div>
     <div class="btm-panel">
@@ -51,192 +63,37 @@
       <img src="./icons/All articles.svg" alt="">
       <img src="./icons/All queries.svg" alt="">
       <img src="./icons/All users.svg" alt="">
-      <img src="./icons/Create article.svg" alt="">
+      <img src="./icons/Create article.svg" alt="" onclick="openPopUp()" style="cursor: pointer;">
       <img src="./icons/Site activity.svg" alt="">
     </div>
 
 
     <div class="container">
-      <!-- <h1 class="head">OVERVIEW</h1> -->
       <div class="grad">
         <div class="articles">
-          <h1>Aricles</h1>
-          <div class="sub-article">
-            <div class="options">
-              <img src="./icons/mdi_file-eye-outline.svg" alt="">
-              <img src="./icons/dashicons_update.svg" alt="">
-              <img src="./icons/fluent_delete-24-regular.svg" alt="">
-            </div>
-            <div class="blog">
-              <div class="thumb"></div>
-              <div class="story">
-                <h2>How to Own Your Audience by Creating an Email List</h2>
-                <p>Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack
-                  bonnet arse</p>
-              </div>
-            </div>
-          </div>
-          <div class="sub-article">
-            <div class="options">
-              <img src="./icons/mdi_file-eye-outline.svg" alt="">
-              <img src="./icons/dashicons_update.svg" alt="">
-              <img src="./icons/fluent_delete-24-regular.svg" alt="">
-            </div>
-            <div class="blog">
-              <div class="thumb"></div>
-              <div class="story">
-                <h2>How to Own Your Audience by Creating an Email List</h2>
-                <p>Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack
-                  bonnet arse</p>
-              </div>
-            </div>
-          </div>
-          <div class="sub-article">
-            <div class="options">
-              <img src="./icons/mdi_file-eye-outline.svg" alt="">
-              <img src="./icons/dashicons_update.svg" alt="">
-              <img src="./icons/fluent_delete-24-regular.svg" alt="">
-            </div>
-            <div class="blog">
-              <div class="thumb"></div>
-              <div class="story">
-                <h2>How to Own Your Audience by Creating an Email List</h2>
-                <p>Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack
-                  bonnet arse</p>
-              </div>
-            </div>
-          </div>
-          <div class="sub-article">
-            <div class="options">
-              <img src="./icons/mdi_file-eye-outline.svg" alt="">
-              <img src="./icons/dashicons_update.svg" alt="">
-              <img src="./icons/fluent_delete-24-regular.svg" alt="">
-            </div>
-            <div class="blog">
-              <div class="thumb"></div>
-              <div class="story">
-                <h2>How to Own Your Audience by Creating an Email List</h2>
-                <p>Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst brolly hanky panky, cack
-                  bonnet arse</p>
-              </div>
-            </div>
-          </div>
+          <h1>Articles</h1>
         </div>
       </div>
 
       <div class="grad1">
         <div class="queries">
           <h1>Queries</h1>
-          <div class="query">
-            <div class="avatar"></div>
-            <div class="details">
-              <div class="name-time">
-                <h2><span>Dr. Sanders</span></h2>
-                <p>11:37 AM</p>
-                <p>13.Aug.22</p>
-              </div>
-              <div class="msg">
-                <p>Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst.</p>
-              </div>
-            </div>
-          </div>
-          <div class="query">
-            <div class="avatar"></div>
-            <div class="details">
-              <div class="name-time">
-                <h2><span>Dr. Sanders</span></h2>
-                <p>11:37 AM</p>
-                <p>13.Aug.22</p>
-              </div>
-              <div class="msg">
-                <p>Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst.</p>
-              </div>
-            </div>
-          </div>
-          <div class="query">
-            <div class="avatar"></div>
-            <div class="details">
-              <div class="name-time">
-                <h2><span>Dr. Sanders</span></h2>
-                <p>11:37 AM</p>
-                <p>13.Aug.22</p>
-              </div>
-              <div class="msg">
-                <p>Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst.</p>
-              </div>
-            </div>
-          </div>
-          <div class="query">
-            <div class="avatar"></div>
-            <div class="details">
-              <div class="name-time">
-                <h2><span>Dr. Sanders</span></h2>
-                <p>11:37 AM</p>
-                <p>13.Aug.22</p>
-              </div>
-              <div class="msg">
-                <p>Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst.</p>
-              </div>
-            </div>
-          </div>
-          <div class="query">
-            <div class="avatar"></div>
-            <div class="details">
-              <div class="name-time">
-                <h2><span>Dr. Sanders</span></h2>
-                <p>11:37 AM</p>
-                <p>13.Aug.22</p>
-              </div>
-              <div class="msg">
-                <p>Tomfoolery crikey bits and bobs brilliant bamboozled down the pub amongst.</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
       <div class="grad2">
         <div class="users">
           <h1>Registered Users</h1>
-          <div class="user">
-            <div class="profile"></div>
-            <div class="auth">
-              <p>Username:<span>Murdock</span> </p>
-              <p>Email:<span>example@gmail.com</span> </p>
-              <p>Password: <span>********</span> </p>
-            </div>
-          </div>
-          <div class="user">
-            <div class="profile"></div>
-            <div class="auth">
-              <p>Username:<span>Murdock</span> </p>
-              <p>Email:<span>example@gmail.com</span> </p>
-              <p>Password: <span>********</span> </p>
-            </div>
-          </div>
-          <div class="user">
-            <div class="profile"></div>
-            <div class="auth">
-              <p>Username:<span>Murdock</span> </p>
-              <p>Email:<span>example@gmail.com</span> </p>
-              <p>Password: <span>********</span> </p>
-            </div>
-          </div>
-          <div class="user">
-            <div class="profile"></div>
-            <div class="auth">
-              <p>Username:<span>Murdock</span> </p>
-              <p>Email:<span>example@gmail.com</span> </p>
-              <p>Password: <span>********</span> </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </div>
-
+  <dialog class="loadingScreen">
+    <div class="loader"></div>
+  </dialog>
+  <!-- <script src="./js/loader.js"></script> -->
   <script src="./js/popup.js"></script>
-
+  <script src="./js/articleval.js"></script>
 </body>
 
 </html>
