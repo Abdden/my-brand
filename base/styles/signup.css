@@ -16,6 +16,9 @@ h6 {
   margin-left: 35px;
 } */
 
+h6 {
+  margin-bottom: 5px;
+}
 .p1 {
   font-size: 30px;
   display: flex;
@@ -41,6 +44,7 @@ h6 {
 }
 
 .calling {
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
   gap: 10%;
@@ -61,6 +65,8 @@ input {
   height: 50px;
   border: #ffb400 3px solid;
   border-radius: 20px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 label h6 {
@@ -77,14 +83,15 @@ label {
 input {
   border-radius: 20px;
   color: #ffffff;
+  padding: 0 20px;
 }
 
-.inline {
-}
-
-.sign {
+.sign,
+.log {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 input[type='password'] {
@@ -114,11 +121,44 @@ input[type='submit'] {
   background: linear-gradient(90deg, #ffb400, #9f2042) padding-box;
   border: none;
   margin-bottom: 10%;
+  cursor: pointer;
+}
+input[type='submit']:hover {
+  opacity: 80%;
 }
 
 ::placeholder {
-  padding-left: 15px;
+  /* padding-left: 15px; */
   font-size: large;
+}
+
+label p,
+.log p {
+  text-align: right;
+  color: #9f2042;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  font-style: italic;
+  margin: 0.5rem 1.5rem 0.5rem;
+  /* margin-right: 1.5rem; */
+}
+
+button {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: large;
+  border: none;
+  outline: none;
+  min-width: 100px;
+  background: linear-gradient(90deg, #ffb400, #9f2042) padding-box;
+  border-radius: 15px;
+  padding: 15px 30px;
+  margin: 25px;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 80%;
 }
 
 @media only screen and (max-width: 992px) {
@@ -131,6 +171,7 @@ input[type='submit'] {
   }
 
   .calling {
+    margin-top: 0px;
     gap: 5px;
     max-width: 360px;
   }

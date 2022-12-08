@@ -1,6 +1,7 @@
-let popUp = document.getElementById('container-article');
+const popUp = document.querySelector('.container-article');
+const create = document.getElementById('create');
 
-let open = document.getElementById('open');
+// const open = document.getElementById('open');
 
 function openPopUp() {
   popUp.classList.add('poppedup');
@@ -9,3 +10,6 @@ function openPopUp() {
 function closePopUp() {
   popUp.classList.remove('poppedup');
 }
+
+// ClassicEditor.create(document.querySelector('#storyblock'));
+CKEDITOR.replace('editor1');
