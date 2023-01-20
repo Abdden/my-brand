@@ -65,7 +65,7 @@ fetch('https://herestohope.onrender.com/blogs')
           comErr.textContent = 'Provide Valid Content';
         } else {
             loadingScreen.showModal()
-            fetch(`http://localhost:5000/blogs/${blogId}/comments`, {
+            fetch(`https://herestohope.onrender.com/blogs/${blogId}/comments`, {
             method: 'POST',
             body: JSON.stringify({
                   comment:comMsg.value,
