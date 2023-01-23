@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./styles/signup.css" />
+  <title>Sign Up</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="content">
+        <div class="fields">
+          <form id="form" action="">
+            <label for="">
+              <h6>Email</h6>
+              <input type="email" name="" placeholder="example@gmail.com" id="admin-email" />
+              <p id="admail-err"></p>
+            </label>
+            <label for="">
+              <h6>Password</h6>
+              <input type="password" name="" placeholder="*******" id="admin-password" />
+              <p id="adpass-err"></p>
+            </label>
+            <div class="tosign">
+              <p>Not Registered ? <br> <a href="/base/signup.html">Sign Up</a></p>
+            </div>
+            <div class="log">
+              <button type="submit" id="todash">Log In</button>
+              <p id="adlog-err"></p>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="right">
+        <img src="./icons/git.svg" alt="" />
+        <img src="./icons/slack (2).svg" alt="" />
+        <img src="./icons/gmail (2).svg" alt="" />
+        <img src="./icons/ig (2).svg" alt="" />
+        <img src="./icons/linkedin (2).svg" alt="" />
+      </div>
+      <div class="left">
+        <a href="../index.html">
+          <p>Home</p>
+        </a>
+        <p>© 2022</p>
+      </div>
+    </div>
+
+  </div>
+  <dialog class="loadingScreen">
+    <div class="loader"></div>
+  </dialog>
+  <script src="./js/formval.js"></script>
+</body>
+
+</html>

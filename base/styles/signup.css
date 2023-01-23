@@ -1,21 +1,6 @@
-/* h1 {
-  font-size: 40px;
-  display: flex;
-  align-items: center;
-}
-
-h2 {
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  color: #ffb400;
-}
-
 h6 {
-  font-size: large;
-  margin-left: 35px;
-} */
-
+  margin-bottom: 5px;
+}
 .p1 {
   font-size: 30px;
   display: flex;
@@ -41,6 +26,7 @@ h6 {
 }
 
 .calling {
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
   gap: 10%;
@@ -55,12 +41,25 @@ h6 {
   border-radius: 35px;
 }
 
+.err {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #9f2042;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  font-style: italic;
+  margin: 0 0 0.5rem;
+}
+
 input {
   display: block;
   width: 350px;
   height: 50px;
   border: #ffb400 3px solid;
   border-radius: 20px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 label h6 {
@@ -71,20 +70,20 @@ label h6 {
 label {
   display: block;
   margin: 10%;
-  /* margin: 20px; */
 }
 
 input {
   border-radius: 20px;
   color: #ffffff;
+  padding: 0 20px;
 }
 
-.inline {
-}
-
-.sign {
+.sign,
+.log {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 input[type='password'] {
@@ -114,11 +113,51 @@ input[type='submit'] {
   background: linear-gradient(90deg, #ffb400, #9f2042) padding-box;
   border: none;
   margin-bottom: 10%;
+  cursor: pointer;
+}
+input[type='submit']:hover {
+  opacity: 80%;
 }
 
 ::placeholder {
-  padding-left: 15px;
   font-size: large;
+}
+
+label p,
+.log p {
+  text-align: right;
+  color: #9f2042;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  font-style: italic;
+  margin: 0.5rem 1.5rem 0.5rem;
+}
+
+.tosign {
+  text-align: center;
+}
+
+.tosign p a {
+  text-decoration: none;
+  color: #9f2042;
+}
+
+button {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: large;
+  border: none;
+  outline: none;
+  min-width: 100px;
+  background: linear-gradient(90deg, #ffb400, #9f2042) padding-box;
+  border-radius: 15px;
+  padding: 15px 30px;
+  margin: 25px;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 80%;
 }
 
 @media only screen and (max-width: 992px) {
@@ -131,6 +170,7 @@ input[type='submit'] {
   }
 
   .calling {
+    margin-top: 0px;
     gap: 5px;
     max-width: 360px;
   }

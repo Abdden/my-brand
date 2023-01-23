@@ -27,17 +27,25 @@
           <form action="">
             <label for="">
               <h6>User Name</h6>
-              <input type="text" placeholder="Name" />
+              <input type="text" placeholder="Name" id="user-name" />
+              <p id="name-err"></p>
             </label>
             <label for="">
               <h6>Email</h6>
-              <input type="email" name="" id="" placeholder="example@gmail.com" />
+              <input type="email" name="" placeholder="example@gmail.com" id="user-email" />
+              <p id="mail-err"></p>
             </label>
             <label for="">
               <h6>Password</h6>
-              <input type="password" name="" id="" placeholder="*******" />
+              <input type="password" name="" placeholder="*******" id="user-password" />
+              <p id="pass-err"></p>
             </label>
-            <div class="sign"><input type="submit" value="Sign Up" /></div>
+            <div class="sign">
+              <input type="submit" value="Sign Up" id="sign" />
+              <div class="err">
+                <p id="submit-err"></p>
+              </div>
+            </div>
 
           </form>
         </div>
@@ -45,7 +53,7 @@
         <div class="side-navigation">
           <div class="links">
             <p><span class="hdn">HOME</span></p>
-            <a href="./index.html"><img src="./icons/Home BTN.svg" alt="" /></a>
+            <a href="../index.html"><img src="./icons/Home BTN.svg" alt="" /></a>
           </div>
           <div class="links">
             <p><span class="hdn">ABOUT</span></p>
@@ -85,12 +93,18 @@
         <img src="./icons/linkedin (2).svg" alt="" />
       </div>
       <div class="left">
-        <p>Abdden's</p>
+        <a href="./admin-login.html">
+          <p>Login</p>
+        </a>
         <p>© 2022</p>
       </div>
     </div>
 
   </div>
+  <dialog class="loadingScreen">
+    <div class="loader"></div>
+  </dialog>
+  <script src="./js/sign-data-valid.js"></script>
 </body>
 
 </html>
