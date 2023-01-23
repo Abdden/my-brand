@@ -1,5 +1,6 @@
 
-window.addEventListener("load", () => {
+window.addEventListener("load", (e) => {
+  e.preventDefault()
   const key = localStorage.getItem('guru');
   if (!key) {
     window.location.href = './../index.html';
@@ -11,9 +12,7 @@ window.addEventListener("load", () => {
         "Authorization": "Bearer " + key,
       },
     }).then((res) => {
-      if (res.status == 200) {
-        window.location.href = 'admin.html';
-      } else {
+      if (res.status != 200) {
         window.location.href = 'admin-login.html';
       }
     });
