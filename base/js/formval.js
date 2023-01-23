@@ -83,7 +83,7 @@ toDash.addEventListener('click', (e) => {
               if(res.status == 200){
                 window.location.href = 'admin.html';
               } else if (res.status == 401){
-                window.location.href = '../../index.html';
+                window.location.href = './../index.html';
               }
             })
             .catch(Error => {
