@@ -244,6 +244,17 @@ span {
   cursor: pointer;
 }
 
+.err {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #9f2042;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  font-style: italic;
+  margin: 0 0 0.5rem;
+}
+
 .thumb-article {
   max-width: 320px;
   height: 140px;

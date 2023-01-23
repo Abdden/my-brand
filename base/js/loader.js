@@ -2,7 +2,7 @@
 window.addEventListener("load", () => {
   const key = localStorage.getItem('guru');
   if (!key) {
-    window.open("../../index.html", "_self");
+    window.location.href = '../../index.html';
   } else {
     fetch('https://herestohope.onrender.com/contacts', {
       method: "GET",
@@ -14,7 +14,7 @@ window.addEventListener("load", () => {
       if (res.status == 200) {
         window.location.href = '../../base/admin.html';
       } else {
-        window.open("./admin-login.html", "_self");
+        window.location.href = './admin-login.html';
       }
     });
   }

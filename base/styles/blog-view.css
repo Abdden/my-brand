@@ -28,7 +28,18 @@ h1 {
   margin-bottom: 30px;
 }
 
-.stat {
+.err {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #9f2042;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  font-style: italic;
+  margin: 0 0 0.5rem;
+}
+
+.stats {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -42,9 +53,7 @@ h1 {
   flex-wrap: wrap;
 }
 
-.coments p,
-.likes p,
-.views p {
+.stats p {
   color: #ffb400;
   display: inline-block;
   vertical-align: super;

@@ -5,7 +5,6 @@ const contentDiv = document.querySelector('.content');
 fetch('https://herestohope.onrender.com/blogs')
 .then((res) => res.json())
 .then(result => {
-  console.log(result);
   const renderBlogInPage = (index) => {
     let blog;
     blog = result

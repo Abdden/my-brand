@@ -41,6 +41,17 @@ h6 {
   border-radius: 35px;
 }
 
+.err {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #9f2042;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  font-style: italic;
+  margin: 0 0 0.5rem;
+}
+
 input {
   display: block;
   width: 350px;

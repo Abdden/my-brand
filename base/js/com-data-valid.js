@@ -44,44 +44,53 @@ fetch('https://herestohope.onrender.com/blogs')
       const bParagraph = document.createElement('p');
       const img = document.createElement('img');
     
-      likesDiv.addEventListener('click', () => {
-        fetch(`https://herestohope.onrender.com/blogs/${blogId}/stats`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${localStorage.getItem('guru')}`
-          }
-        })
-        .then(() => {
-          location.reload()
-        })
-      })
-      
       const loadingScreen = document.querySelector('.loadingScreen')
 
-      addCom.addEventListener('click', (e) => {
-        e.preventDefault()
-        if(!validMsg()){
-          comErr.textContent = 'Provide Valid Content';
-        } else {
-            loadingScreen.showModal()
-            fetch(`https://herestohope.onrender.com/blogs/${blogId}/comments`, {
+      likesDiv.addEventListener('click', () => {
+        const key = localStorage.getItem('guru')
+        if(key){
+          loadingScreen.showModal()
+          fetch(`https://herestohope.onrender.com/blogs/${blogId}/stats`, {
             method: 'POST',
-            body: JSON.stringify({
-                  comment:comMsg.value,
-                  }),
             headers: {
               'Content-Type': 'application/json',
               'Authorization': `Bearer ${localStorage.getItem('guru')}`
             }
           })
-          .then(res => {
-            if(res.status == 200){
-              loadingScreen.close()
-              location.reload()
-            }
-            console.log(res.status);
+          .then(() => {
+            location.reload()
           })
+        } else {
+          alert('You Need To Log In First.')
+        }
+      })
+      
+
+      addCom.addEventListener('click', (e) => {
+        e.preventDefault()
+        const key = localStorage.getItem('guru')
+        if(!validMsg()){
+          comErr.textContent = 'Provide Valid Comment.';
+        } else if(!key){
+          comErr.textContent = 'You Need To Log In First.';
+        } else {
+          loadingScreen.showModal()
+          fetch(`https://herestohope.onrender.com/blogs/${blogId}/comments`, {
+          method: 'POST',
+          body: JSON.stringify({
+                comment:comMsg.value,
+                }),
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('guru')}`
+          }
+        })
+        .then(res => {
+          if(res.status == 200){
+            loadingScreen.close()
+            location.reload()
+          }
+        })
         }
       })
 
