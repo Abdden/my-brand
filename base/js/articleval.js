@@ -125,6 +125,7 @@ fetch('https://herestohope.onrender.com/blogs')
     storyDiv.classList.add('story');
   
     deleteBtn.addEventListener('click', () => {
+      loadingScreen.showModal()
       const id = deleteBtn.parentElement.parentElement.children[1].textContent
       fetch(`https://herestohope.onrender.com/blogs/${id}`, {
         method: 'DELETE',
@@ -134,6 +135,7 @@ fetch('https://herestohope.onrender.com/blogs')
         }
       })
       .then(res => {
+        loadingScreen.close()
         if(res.status === 204){
           location.reload();
         }
@@ -245,6 +247,9 @@ postBtn.addEventListener('click', (e) => {
         loadingScreen.close()
         if(res.status === 200){
           location.reload();
+        } else if(res.status === 409){
+          postErr.style.display = 'block';
+          postErr.textContent = 'Blog Arleady Exists!';
         }
       })
     } else {
@@ -270,7 +275,7 @@ postBtn.addEventListener('click', (e) => {
 });
 
 const deleteQuery = (id) => {
-    console.log(id);
+    loadingScreen.showModal()
     fetch(`https://herestohope.onrender.com/contact/${id}`, {
       method: 'DELETE',
       headers: {
@@ -279,6 +284,7 @@ const deleteQuery = (id) => {
       }
     })
     .then(res => {
+      loadingScreen.close()
         if(res.status === 204){
           location.reload();
         }

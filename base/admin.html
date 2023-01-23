@@ -24,23 +24,31 @@
           <label class="photo">
             <img id="test" src="./icons/Upload-to-cloud.svg" alt="" class="isIcon">
             <input type="file" name="" id="thmpic">
-            <p id="pic-err"></p>
+            <div class="err">
+              <p id="pic-err"></p>
+            </div>
           </label>
         </div>
         <div class="headline">
           <h4>Headline</h4>
           <div class="title"><input type="text" name="" id="titleblock" onkeypress="validHead()"></div>
-          <p id="tyt-err"></p>
+          <div class="err">
+            <p id="tyt-err"></p>
+          </div>
         </div>
         <div class="story-article">
           <h4>Story/Article</h4>
           <div class="article">
             <textarea name="editor1" id="editor1" onkeypress="validArticle()" cols="30" rows="30"></textarea>
           </div>
-          <p id="art-err"></p>
+          <div class="err">
+            <p id="art-err"></p>
+          </div>
         </div>
         <button type="submit" id="post">POST</button>
-        <p id="post-err"></p>
+        <div class="err">
+          <p id="post-err"></p>
+        </div>
       </div>
 
     </div>
@@ -91,7 +99,7 @@
   <dialog class="loadingScreen">
     <div class="loader"></div>
   </dialog>
-  <!-- <script src="./js/loader.js"></script> -->
+  <script src="./js/loader.js"></script>
   <script src="./js/popup.js"></script>
   <script src="./js/articleval.js"></script>
 </body>

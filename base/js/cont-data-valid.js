@@ -127,11 +127,14 @@ const postFetch = async () => {
     loadingScreen.close()
     if(res.status == 200){
       location.reload()
-      alert('Query Sent Successfully')
+      confirm('Thanks For Reaching Out.')
     }
     return res.json()
   })
 } catch (error) {
+  loadingScreen.close()
   console.log(error);
+  sendErr.style.display = 'block';
+  sendErr.textContent = 'Something Went Wrong!, Reload Required.';
 }
 }

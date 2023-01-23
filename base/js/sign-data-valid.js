@@ -108,12 +108,13 @@ function validForm() {
           return null
         }
       })
-      // .then(data => {
-      //   if(data != 200){
-      //   }
-      // })
+      .catch (error => {
+        loadingScreen.close()
+        console.log(error);
+        submitErr.style.display = 'block';
+        submitErr.textContent = 'Something Went Wrong!, Reload Required.';
+      })
     }
-    resetForm();
   });
 
 nameEl.addEventListener('keyup', validName);
